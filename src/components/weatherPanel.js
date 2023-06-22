@@ -14,6 +14,7 @@ const WeatherPanel=()=>{
     const[forecast, setForecast]=useState([]);
     const[loading, setLoading]= useState(false);
     const[show, setShow]= useState(false);
+    // eslint-disable-next-line no-unused-vars
     const[location, setLocation]=useState(""); 
 
     const getLocation= async(loc)=>{
@@ -26,6 +27,7 @@ const WeatherPanel=()=>{
         urlWeather= urlWeather + cityUrl + loc;
         
         await fetch(urlWeather).then((response)=>{
+            // eslint-disable-next-line no-throw-literal
             if(!response.ok) throw {response}
             return response.json();
 
@@ -45,6 +47,7 @@ const WeatherPanel=()=>{
         urlForeCast= urlForeCast + cityUrl + loc;
 
         await fetch(urlForeCast).then((response)=>{
+            // eslint-disable-next-line no-throw-literal
             if(!response.ok) throw {response}
             return response.json();
 
